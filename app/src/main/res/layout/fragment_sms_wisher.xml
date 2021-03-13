@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/greetingWisherLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview_errormsg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/error_border"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="408dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textview_errormsg"
+            tools:ignore="MissingConstraints">
+
+            <com.santalu.maskedittext.MaskEditText
+                android:id="@+id/editText_mobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                android:hint="@string/enter_10_digit_mobile_no"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:met_mask="+91 ##########" />
+
+            <ImageButton
+                android:id="@+id/open_phoneBook"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/contact_list"
+                android:text="Button" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/editText_date"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="24dp"
+            android:inputType="date"
+            android:hint="Select date to send message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl1"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <Spinner
+            android:id="@+id/spinner_occasion"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="16dp"
+            android:prompt="@string/prompt_occasion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_date"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editText_message"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border"
+            android:hint="Please type your message"
+            android:maxLines="7"
+            android:minLines="1"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_occasion"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <Button
+            android:id="@+id/smsWisher_SaveButton"
+            android:layout_width="100dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="136dp"
+            android:text="@string/save_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_message"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
