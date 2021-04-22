@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BFFF9800"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -66,7 +70,8 @@
                     android:fontFamily="@font/days_one"
                     android:padding="8dp"
                     android:hint="Enter name"
-                    android:autofillHints="true" />
+                    android:autofillHints="true"
+                    android:gravity="start" />
 
             </androidx.cardview.widget.CardView>
 
@@ -95,7 +100,8 @@
                     android:fontFamily="@font/days_one"
                     android:inputType="textEmailAddress"
                     android:hint="Enter email address"
-                    android:autofillHints="true" />
+                    android:autofillHints="true"
+                    android:gravity="start" />
 
             </androidx.cardview.widget.CardView>
 
@@ -124,7 +130,8 @@
                     android:fontFamily="@font/days_one"
                     android:inputType="textPassword"
                     android:hint="Enter password"
-                    android:autofillHints="true" />
+                    android:autofillHints="true"
+                    android:gravity="start" />
 
             </androidx.cardview.widget.CardView>
 
@@ -175,7 +182,8 @@
                         android:textStyle="bold"
                         android:background="@android:color/transparent"
                         android:fontFamily="@font/days_one"
-                        android:text="Already have an account?"/>
+                        android:text="Already have an account?"
+                        android:layout_marginLeft="18dp" />
 
                     <TextView
                         android:id="@+id/LoginTv"
@@ -189,7 +197,8 @@
                         android:background="?attr/selectableItemBackground"
                         android:layout_marginStart="18dp"
                         android:layout_gravity="center"
-                        android:textColor="#090CB6"/>
+                        android:textColor="#090CB6"
+                        android:layout_marginLeft="18dp" />
 
                 </LinearLayout>
 
@@ -200,3 +209,4 @@
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
+</ScrollView>

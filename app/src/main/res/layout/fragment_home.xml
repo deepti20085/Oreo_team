@@ -1,124 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment"
-    android:layout_marginTop="20dp">
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_home"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-
-    <LinearLayout
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp">
-        <Button
-            android:id="@+id/Btn_greetingWisher"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        android:orientation="vertical"
+        tools:context=".ui.home.HomeFragment">
+
+        <!--    <TextView-->
+        <!--        android:id="@+id/text_home"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="8dp"-->
+        <!--        android:layout_marginTop="8dp"-->
+        <!--        android:layout_marginEnd="8dp"-->
+        <!--        android:textAlignment="center"-->
+        <!--        android:textSize="20sp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Greeting Wisher"
-            android:layout_margin="10dp" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:layout_margin="6dp">
+            <Button
+                android:id="@+id/Btn_greetingWisher"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="#4B9C27B0"
+                android:text="@string/auto_sms_wisher"
+                android:drawableTop="@drawable/smscalendaricon"
+                android:layout_margin="3dp"
+                tools:targetApi="lollipop" />
+            <Button
+                android:id="@+id/Btn_timer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4B9C27B0"
+                android:text="@string/auto_app_timer"
+                android:drawableTop="@drawable/timerfunctionalityicon"
+                android:layout_margin="3dp"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt2"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp">
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:layout_margin="6dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4B9C27B0"
+                android:textAllCaps="false"
+                android:text="Auto Gesture Detector"
+                android:drawableTop="@drawable/gestureicon"
+                android:id="@+id/btn_gesture"
+                android:layout_margin="3dp"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_jk"
+                android:backgroundTint="#4B9C27B0"
+                android:textAllCaps="false"
+                android:text="Auto Play on trigger"
+                android:drawableTop="@drawable/play_on_trigger_icon"
+                android:layout_margin="3dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:layout_margin="6dp">
+            <Button
+                android:id="@+id/Btn_autoUpload"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4B9C27B0"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:text="Auto Upload on Drive"
+                android:drawableTop="@drawable/autouploadondrive"
+                android:layout_margin="3dp"
+                />
+        </LinearLayout>
+        <!--
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="funt2"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:padding="10dp"
-            android:text="funt1"
             android:layout_margin="10dp"
-            />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt2"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp">
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt1"
-            android:layout_margin="10dp"
-            />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt2"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp">
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt1"
-            android:layout_margin="10dp"
-            />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="funt2"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="funt1"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="funt2"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
 
 
-</LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/homepageanimation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_rawRes="@raw/homepageanimation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+            -->
+
+    </LinearLayout>
+
+</ScrollView>

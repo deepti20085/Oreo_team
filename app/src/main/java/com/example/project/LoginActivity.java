@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference("Users").child(Objects.requireNonNull(mAuth.getCurrentUser()).getUid())
                             .setValue(user).addOnCompleteListener(task1 -> {
                         if(task1.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"You are logged in successfully",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"You are logged in successfully.Redirecting to Home page...",Toast.LENGTH_LONG).show();
                             Intent intent=new Intent(getApplicationContext(),HomeActivity.class);
                             startActivity(intent);
                         }

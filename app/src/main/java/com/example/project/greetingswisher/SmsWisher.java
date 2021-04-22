@@ -115,7 +115,6 @@ public class SmsWisher extends Fragment {
                 dateSetListener = new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        Calendar calendar=Calendar.getInstance();
                         calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
                         calendar.set(Calendar.MONTH,month);
                         calendar.set(Calendar.YEAR,calendar.get(Calendar.YEAR));
@@ -245,7 +244,7 @@ public class SmsWisher extends Fragment {
         Intent intent=new Intent(getActivity(), AlarmReceiver.class);
         String msg = TextEditor_message.getText().toString();
         String no = TextEditor_mobileNo.getText().toString();
-        //no = no.replaceAll("\\+91", "");
+        no = no.replaceAll("\\+91", "");
         intent.putExtra("sms", msg );
         intent.putExtra("receiver_number", no);
         Log.d("autodroid", no);

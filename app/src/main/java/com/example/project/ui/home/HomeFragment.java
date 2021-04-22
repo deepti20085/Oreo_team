@@ -16,13 +16,20 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.project.GestureActivity;
+import com.example.project.JackActivity;
 import com.example.project.R;
 import com.example.project.SingleFragment;
+import com.example.project.TimerActivity;
+import com.example.project.driveUpload.photoUploader;
 import com.example.project.greetingswisher.SmsWisher;
 
 public class HomeFragment extends Fragment {
 
-    private Button BtnGreetingWisher;
+    private Button BtnGreetingWisher, BtnphotoUploader;
+    private Button BtnTimer;
+    private Button Btnges;
+    private Button Btnjck;
     private HomeViewModel homeViewModel;
     Fragment fragment;
 
@@ -42,6 +49,47 @@ public class HomeFragment extends Fragment {
                 fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+            }
+        });
+
+        //On click listener for photo upload to GDrive functionality
+        BtnphotoUploader=(Button) root.findViewById(R.id.Btn_autoUpload);
+        BtnphotoUploader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragment = new photoUploader();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        BtnTimer=(Button) root.findViewById(R.id.Btn_timer);
+        BtnTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(getActivity(), TimerActivity.class);
+                startActivity(i1);
+            }
+        });
+
+        Btnges=(Button) root.findViewById(R.id.btn_gesture);
+        Btnges.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(getActivity(), GestureActivity.class);
+                startActivity(i1);
+            }
+        });
+
+        Btnjck=(Button) root.findViewById(R.id.btn_jk);
+        Btnjck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(getActivity(), JackActivity.class);
+                startActivity(i1);
             }
         });
 
